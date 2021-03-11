@@ -1,0 +1,66 @@
+.activitychart {
+  position: relative;
+}
+
+.activitychart__activityrow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.activitychart__activityrow:not(.activitychart__activityrow:nth-child(1)){
+  top: 0;
+  margin-top: -60px;
+}
+
+.activitychart__activityrow:nth-child(2n+1) {
+  left: 17px;
+  width: calc(100% - 17px);
+}
+
+.activitychart__activityrow__activityblock {
+  height: 74px;
+  width: 34px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.theme_light .activitychart__activityrow__activityblock--min {
+  /* background-image: url('../../assets/images/1x/min-light.png'); */
+  background-image: url('../../assets/images/min-light.svg');
+}
+
+.theme_light .activitychart__activityrow__activityblock--mid {
+  /* background-image: url('../../assets/images/1x/mid-light.png'); */
+  background-image: url('../../assets/images/mid-light.svg');
+}
+
+.theme_light .activitychart__activityrow__activityblock--max {
+  /* background-image: url('../../assets/images/1x/max-light.png'); */
+  background-image: url('../../assets/images/max-light.svg');
+}
+
+.theme_light .activitychart__activityrow__activityblock--extra {
+  /* background-image: url('../../assets/images/1x/extra-light.png'); */
+  background-image: url('../../assets/images/extra-light.svg');
+}
+
+.theme_dark .activitychart__activityrow__activityblock--min {
+  /* background-image: url('../../assets/images/1x/min-dark.png'); */
+  background-image: url('../../assets/images/min-dark.svg');
+}
+
+.theme_dark .activitychart__activityrow__activityblock--mid {
+  /* background-image: url('../../assets/images/1x/mid-dark.png'); */
+  background-image: url('../../assets/images/mid-dark.svg');
+}
+
+.theme_dark .activitychart__activityrow__activityblock--max {
+  /* background-image: url('../../assets/images/1x/max-dark.png'); */
+  background-image: url('../../assets/images/max-dark.svg');
+}
+
+.theme_dark .activitychart__activityrow__activityblock--extra {
+  /* background-image: url('../../assets/images/1x/extra-dark.png'); */
+  background-image: url('../../assets/images/extra-dark.svg');
+}
