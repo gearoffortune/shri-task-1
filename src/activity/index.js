@@ -1,4 +1,6 @@
 import {html, render} from 'lit-html'
+import './styles.css';
+
 const performanceBlocks = [
   html`<div class="activitychart__activityrow__activityblock activitychart__activityrow__activityblock--min"></div>`,
   html`<div class="activitychart__activityrow__activityblock activitychart__activityrow__activityblock--mid"></div>`,
@@ -6,9 +8,9 @@ const performanceBlocks = [
   html`<div class="activitychart__activityrow__activityblock activitychart__activityrow__activityblock--extra"></div>`,
 ]
 
-const activitybar = (hourlyArray) => html`    
+const activitybar = (hourlyArray, getInterval) => html`    
 <div class="activitychart__activityrow">
-${hourlyArray.map((hourlyData) => performanceBlocks[Math.floor(hourlyData/2)])}
+${hourlyArray.map((hourlyData) => performanceBlocks[getInterval(hourlyData)])}
 </div>`
 const data = {
   "alias": "activity",
@@ -27,8 +29,10 @@ const data = {
   }
 }
 
-// const helloWorld = html`<div>hello world</div>`
 const dayNumber = ['mon', 'tue', 'wed','thu', 'fri', 'sat', 'sun']
+const concatMatrix = (matrix) => {
+  return matrix.reduce((accum, iter) => accum.concat(iter), []);
+}
 const matrixT = (matrix) => {
   const newMatrix = Array(matrix[0].length).fill([]).map(_ => []);
   for(let i = 0; i < matrix.length; i++){
@@ -47,11 +51,38 @@ const squashDataInTwoHourBlocks = (dataMatrix) => {
     return res;
   })
 }
-const renderWeeklyBar = (data) => {
+const getIntervals = (dataMatrix) => {
+  const min = Math.min(...(concatMatrix(dataMatrix).filter(x => x!==0)))
+  const max = Math.max(...concatMatrix(dataMatrix))
+  const interval = Math.floor((max - min)/3) + 1
+  const intervalBlocks = [0, min, min + interval, min + 2*interval ]
+  return (number) => {
+    if(number===0){
+      return 0;
+    }
+    for(let i = 1; i < intervalBlocks.length; i++){
+      if(intervalBlocks[i]<=number&&intervalBlocks[i+1]>number){
+        return i;
+      }
+    }
+    return 3
+  }
+}
+const renderHorizontalWeeklyBar = (data) => {
   const arrayLikeData = dayNumber.map(day => data[day]);
 
-  //return matrixT(arrayLikeData).map(activitybar);
-  return squashDataInTwoHourBlocks(arrayLikeData).map(activitybar);
+  const twoHourBlocks = squashDataInTwoHourBlocks(arrayLikeData);
+  const intervals = getIntervals(twoHourBlocks);
+  return twoHourBlocks.map((data) => activitybar(data, intervals));
 }
 
-render(renderWeeklyBar(data.data.data), document.body);
+const renderVerticalWeeklyBar = (data) => {
+  const arrayLikeData = dayNumber.map(day => data[day]);
+
+  const intervals = getIntervals(arrayLikeData);
+  const vertical = matrixT(arrayLikeData)
+  return vertical.map((data) => activitybar(data, intervals));
+}
+
+render(renderHorizontalWeeklyBar(data.data.data), document.querySelector('.horizontal'));
+render(renderVerticalWeeklyBar(data.data.data), document.querySelector('.vertical'))
