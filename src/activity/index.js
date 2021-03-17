@@ -51,16 +51,15 @@ const squashDataInTwoHourBlocks = (dataMatrix) => {
     return res;
   })
 }
+
+
 const getIntervals = (dataMatrix) => {
-  const min = Math.min(...(concatMatrix(dataMatrix).filter(x => x!==0)))
-  const max = Math.max(...concatMatrix(dataMatrix))
-  const interval = Math.floor((max - min)/3) + 1
-  const intervalBlocks = [0, min, min + interval, min + 2*interval ]
+  const intervalBlocks = getIntervalBlocks(dataMatrix);
   return (number) => {
     if(number===0){
       return 0;
     }
-    for(let i = 1; i < intervalBlocks.length; i++){
+    for(let i = 1; i < intervalBlocks.length - 1; i++){
       if(intervalBlocks[i]<=number&&intervalBlocks[i+1]>number){
         return i;
       }
@@ -73,7 +72,7 @@ const renderHorizontalWeeklyBar = (data) => {
 
   const twoHourBlocks = squashDataInTwoHourBlocks(arrayLikeData);
   const intervals = getIntervals(twoHourBlocks);
-  return twoHourBlocks.map((data) => activitybar(data, intervals));
+  return html`<div class="activitychart activitychart--horizontal">${twoHourBlocks.map((data) => activitybar(data, intervals))}</div>`;
 }
 
 const renderVerticalWeeklyBar = (data) => {
@@ -81,8 +80,60 @@ const renderVerticalWeeklyBar = (data) => {
 
   const intervals = getIntervals(arrayLikeData);
   const vertical = matrixT(arrayLikeData)
-  return vertical.map((data) => activitybar(data, intervals));
+  return html`<div class="activitychart activitychart--vertical">${vertical.map((data) => activitybar(data, intervals))}</div>`;
 }
 
-render(renderHorizontalWeeklyBar(data.data.data), document.querySelector('.horizontal'));
-render(renderVerticalWeeklyBar(data.data.data), document.querySelector('.vertical'))
+const header = (title, subtitle) => html`<div class="header">
+<h1 class="header__mainheader">${title}</h1>
+<h2 class="header__secondaryheader">${subtitle}</h2>
+</div>`
+
+const renderAll = (data) => {
+  return [
+    header(data.title, data.subtitle), 
+    renderHorizontalWeeklyBar(data.data), 
+    renderVerticalWeeklyBar(data.data), 
+     html`<div class="scale__wrapper">
+       <div class="scale">${scale(getIntervalBlocks(dayNumber.map(day => data.data[day])))}</div>
+     </div>`
+  ]
+}
+
+const hoursScaleDash = (hoursScale, orientation) => html`<div class="scale__scaleblock scale__scaleblock--${orientation}">
+  <div class="scale__scaleblock__dash"></div>
+  <p class="scale__scaleblock__desc">${hoursScale}</p>
+</div>`
+
+const scales = (ranges) => html`
+  <div class="scale__scaleblock">
+    <div class="scale__scaleblock__colorblock scale__scaleblock__colorblock--min"></div>
+    <p class="scale__scaleblock__desc">${ranges[0]}</p>
+  </div>
+  <div class="scale__scaleblock">
+    <div class="scale__scaleblock__colorblock scale__scaleblock__colorblock--mid"></div>
+    <p class="scale__scaleblock__desc">${ranges[1] +' — ' + ranges[2]}</p>
+  </div>
+  <div class="scale__scaleblock">
+    <div class="scale__scaleblock__colorblock scale__scaleblock__colorblock--max"></div>
+    <p class="scale__scaleblock__desc">${ranges[2]+' — '+ranges[3]}</p>
+  </div>
+  <div class="scale__scaleblock">
+    <div class="scale__scaleblock__colorblock scale__scaleblock__colorblock--extra"></div>
+    <p class="scale__scaleblock__desc">${ranges[3]+' — '+ranges[4]}</p>
+  </div>
+`
+
+const scale = (ranges) => {
+
+  return [hoursScaleDash('1 час', 'vertical'), hoursScaleDash('2 часа', 'horizontal'), scales(ranges)]
+}
+
+render(renderAll(data.data), document.body);
+
+function getIntervalBlocks(dataMatrix) {
+  const min = Math.min(...(concatMatrix(dataMatrix).filter(x => x !== 0)));
+  const max = Math.max(...concatMatrix(dataMatrix));
+  const interval = Math.floor((max - min) / 3) + 1;
+  const intervalBlocks = [0, min, min + interval, min + 2 * interval, max];
+  return intervalBlocks;
+}
