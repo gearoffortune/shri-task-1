@@ -1,0 +1,41 @@
+
+
+.theme_dark .header__mainheader {
+  color: #FCFBF7;
+  margin: 0;
+}
+
+.header__mainheader {
+  color: #261C00;
+font-family: Roboto;
+font-weight: 500;
+font-size: 30px;
+line-height: 32px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
+.theme_dark .header__secondaryheader {
+  color: #918F8A;
+  margin: 0;
+}
+.header__secondaryheader {
+  color: #BFBFBF;
+font-family: Roboto;
+font-weight: 400;
+font-size: 16px;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
+@media (min-width: 667px) {
+  .header__mainheader {
+    text-align: center;
+  }
+  .header__secondaryheader {
+    text-align: center;
+  }
+}
