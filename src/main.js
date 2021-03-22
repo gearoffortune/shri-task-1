@@ -1,4 +1,4 @@
-import {screenTemplate} from './chart/'
+import {screenTemplate} from './leaders/'
 import {render} from 'lit-html'
 
 
