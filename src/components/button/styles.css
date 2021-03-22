@@ -1,0 +1,24 @@
+.button {
+  background: url('../../../assets/images/button-light.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 64px;
+  width: 64px;
+}
+
+.button:hover {  
+  background: url('../../../assets/images/button-hover-light.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button--up {
+  transform: rotate(180deg);
+}
+
+.theme_dark .button {
+  background: url('../../../assets/images/button-dark.svg');
+}
+.theme_dark .button:hover {
+  background: url('../../../assets/images/button-hover-dark.svg');
+}
