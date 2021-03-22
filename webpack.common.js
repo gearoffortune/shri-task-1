@@ -7,13 +7,13 @@ const babel = require('babel-loader');
 
 module.exports = {
     entry: {
-        index: './src/activity/index.js',
+        index: './src/main.js',
     },
     devtool: 'inline-source-map',
     devServer: { contentBase: path.resolve(__dirname, 'dist') },
     plugins: [
         new CleanWebpackPlugin(), 
-        // new CopyPlugin({ patterns: ['public'] }),
+        new CopyPlugin({ patterns: ['assets'] }),
         new HtmlWebpackPlugin({ filename: 'index.html', chunks: ['index'], template: 'src/index.html', title: 'test' }),
         new MiniCssExtractPlugin(),
     ],

@@ -17,23 +17,192 @@
   font-family: Roboto;
 }
 
-.header__mainheader {
-  color: #261C00;
-font-family: Roboto;
-font-weight: 500;
-font-size: 30px;
-line-height: 32px;
-letter-spacing: 0px;
-text-align: left;
-
+.chart__chart__chartbar__bar {
+  border-radius: 6px;
+  width: 40px;
 }
-.header__secondaryheader {
-  color: #BFBFBF;
-font-family: Roboto;
-font-weight: 400;
-font-size: 16px;
-line-height: 18px;
-letter-spacing: 0px;
-text-align: left;
 
+.theme_light .chart__chart__chartbar__bar {
+  background: linear-gradient(-180deg, #F4F4F4 1%, #E9E9E9 100%, #EAEAEA 100%);
+  box-shadow: inset 0px 0px 20px 0px #CFCFCF,inset -1px 1px 1px 0px #FFFFFF;
+}
+
+.theme_light .chart__chart__chartbar__bar--active {
+  background: linear-gradient(-180deg, #FFF2D1 1%, #FFD66C 100%);
+  box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF;
+}
+
+.theme_dark .chart__chart__chartbar__bar {
+  background: radial-gradient(circle at 50% 50%, #000000 0%, #231900 0%, #4D4D4D 100%),linear-gradient(180deg, #000000 0%, #000000 100%);
+  box-shadow: inset 2px 2px 16px 0px #676767,inset -1px 1px 1px 0px #FFFFFF;  
+}
+
+.theme_dark .chart__chart__chartbar__bar--active {
+  background: radial-gradient(circle at 50% 50%, #FFA300 0%, #2D1C00 100%);
+  box-shadow: inset 0px 6px 15px 0px #FFA200,inset -1px 1px 1px 0px #FFFFFF;
+}
+
+body.theme_dark {
+  background-color: #080602;
+}
+
+.chart__chart {
+  display: flex;
+  justify-content: space-around;
+  right: 12px;
+  position: absolute;
+}
+
+@media (min-width: 577px) {
+  .chart__chart {
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 0 8.7vw;
+    height: 50vh;
+  }
+}
+
+@media (max-width: 578px) {
+  .chart__chart {
+    height: 60vh;
+  }
+}
+
+
+.chart__chart__chartbar__title {
+  text-align: center;
+  color: #BFBFBF;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 12px 0;
+}
+
+.chart__chart__chartbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 12px;
+}
+
+.chart__leaders {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin: 24px;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 637px) {
+  .chart__leaders__spacer {
+    height: 2px;
+    width: 100%;
+    margin: 16px 0;
+  }
+  .chart__leaders {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 638px) {
+  .chart__leaders {
+    justify-content: center;
+  }
+  .chart__leaders__leader {
+    margin: 0 16px;
+  }
+  .chart__leaders__spacer {
+    height: 38px;
+    width: 2px;
+  }
+}
+
+.chart__leaders__leader {
+  display: flex;
+  height: 38px;
+}
+
+.chart__leaders__spacer {
+  opacity: 0.30000001192092896;
+  background: #BFBFBF;
+}
+
+.chart__leaders__leader__meta {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+}
+
+.theme_dark .chart__leaders__leader__meta__name {
+  color: #FCFBF7;
+}
+
+.theme_dark .chart__leaders__leader__meta__text {
+  color: #918F8A;
+}
+
+.chart__leaders__leader__meta__name {
+  color: #261C00;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.chart__leaders__leader__meta__text {
+  color: #BFBFBF;
+  font-family: Roboto;
+  font-weight: regular;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.chart__leaders__leader__img {
+  border-radius: 50%;
+}
+
+.theme_dark .chart__chart__chartbar__value {
+  color: #918F8A;
+}
+
+.chart__chart__chartbar__value {
+  text-align: center;
+  color: #BFBFBF;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.theme_dark .chart__chart__chartbar__value {
+  color: #918F8A;
+}
+
+.theme_dark .chart__chart__chartbar__value--active {
+  color: #FCFBF7;
+}
+
+.theme_light .chart__chart__chartbar__value--active {
+  color: #261C00;
+}
+
+.chart__chart__chartbar__value--active {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: center;
 }
