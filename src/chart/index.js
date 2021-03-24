@@ -1,4 +1,4 @@
-import {html} from 'lit-html'
+import {html} from '../html-IoC'
 import {header} from '../components/header';
 import './styles.css'
 const data = {
@@ -59,4 +59,4 @@ const chartleaders = (users) => html`<div class="chart__leaders"><div class="cha
   </div>
 </div></div>`
 
-export const screenTemplate = [header(data.data.title, data.data.subtitle), chartbars(data.data.values), chartleaders(data.data.users)]
+export const screenTemplate = (data) => html`${[header(data.title, data.subtitle), chartbars(data.values), chartleaders(data.users)]}`

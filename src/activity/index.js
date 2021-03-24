@@ -1,4 +1,4 @@
-import {html, render} from 'lit-html'
+import {html} from '../html-IoC'
 import './styles.css';
 
 const performanceBlocks = [
@@ -88,15 +88,15 @@ const header = (title, subtitle) => html`<div class="header">
 <h2 class="header__secondaryheader">${subtitle}</h2>
 </div>`
 
-const renderAll = (data) => {
-  return [
+export const screenTemplate = (data) => {
+  return html`${[
     header(data.title, data.subtitle), 
     renderHorizontalWeeklyBar(data.data), 
     renderVerticalWeeklyBar(data.data), 
      html`<div class="scale__wrapper">
        <div class="scale">${scale(getIntervalBlocks(dayNumber.map(day => data.data[day])))}</div>
      </div>`
-  ]
+  ]}`
 }
 
 const hoursScaleDash = (hoursScale, orientation) => html`<div class="scale__scaleblock scale__scaleblock--${orientation}">
@@ -128,7 +128,6 @@ const scale = (ranges) => {
   return [hoursScaleDash('1 час', 'vertical'), hoursScaleDash('2 часа', 'horizontal'), scales(ranges)]
 }
 
-render(renderAll(data.data), document.body);
 
 function getIntervalBlocks(dataMatrix) {
   const min = Math.min(...(concatMatrix(dataMatrix).filter(x => x !== 0)));

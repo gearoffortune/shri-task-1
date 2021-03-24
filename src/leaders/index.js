@@ -1,4 +1,4 @@
-import {html} from 'lit-html'
+import {html} from '../html-IoC'
 import {person} from '../components/person/'
 import {header as headerComponent} from '../components/header/'
 import './styles.css'
@@ -23,29 +23,14 @@ const bar = (position) => html`
 </div>
 `
 
-const leaders = {
-  "alias": "leaders",
-  "data": {
-    "title": "Больше всего коммитов",
-    "subtitle": "Спринт № 213",
-    "emoji": "👑",
-    "users": [
-      {"id": 3, "name": "Дарья Ковалева", "avatar": "3.jpg", "valueText": "32"},
-      {"id": 9, "name": "Сергей Бережной", "avatar": "9.jpg", "valueText": "27"},
-      {"id": 7, "name": "Дмитрий Андриянов", "avatar": "7.jpg", "valueText": "22"},
-      {"id": 6, "name": "Андрей Мокроусов", "avatar": "6.jpg", "valueText": "20"},
-      {"id": 8, "name": "Александр Иванков", "avatar": "8.jpg", "valueText": "19"}
-    ]
-  }
-}
 
-const userWithBar =(user, position) => html`
+const userWithBar =(user, position, emoji) => html`
 <div class="barblock">
-  <div class="barblock__user">${leaders__person(user, position===0 , leaders.data.emoji)}</div>
+  <div class="barblock__user">${leaders__person(user, position===0 , emoji)}</div>
   <div class="barblock__bar">${bar(position+1)}</div>
 </div>
 `
 
-export const screenTemplate = [
-  header(leaders.data.title, leaders.data.subtitle), 
-  html`<div class="barblocks">${leaders.data.users.map((user, i) => userWithBar(user, i))}</div>`]
+export const screenTemplate = (data) => html`${[
+  header(data.title, data.subtitle), 
+  html`<div class="barblocks">${data.users.map((user, i) => userWithBar(user, i, data.emoji))}</div>`]}`

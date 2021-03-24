@@ -137,24 +137,6 @@ body.theme_dark {
   background: radial-gradient(circle at 50% 50%, #120C01 0%, #000000 100%);
 }
 
-@font-face {
-  font-family: Roboto;
-  src: url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-@font-face {
-  font-family: Roboto;
-  src: url('../../assets/fonts/Roboto-Medium.ttf') format('truetype');
-  font-weight: 500;
-}
-@font-face {
-  font-family: Roboto;
-  src: url('../../assets/fonts/Roboto-Bold.ttf') format('truetype');
-  font-weight: 500;
-}
-* {
-  font-family: Roboto;
-}
 
 .theme_dark .header__mainheader {
   color: #FCFBF7;

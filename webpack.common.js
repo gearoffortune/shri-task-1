@@ -29,14 +29,15 @@ module.exports = {
             //     use: [MiniCssExtractPlugin.loader, 'css-loader'],
             // },
             { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
-            { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
+            {test :/\.svg$/i, type: 'asset/inline', use: 'svgo-loader'},
+            { test: /\.(woff(2)?|eot|ttf|otf|)$/, type: 'asset/inline' },
         ],
     },
     resolve: {
         extensions: ['.js'],
     },
     output: {
-        filename: '[name].[contenthash:8].js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
 };

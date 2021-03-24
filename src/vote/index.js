@@ -2,7 +2,7 @@ import {header} from '../components/header'
 import {person} from '../components/person'
 import {button} from '../components/button'
 import './styles.css'
-import {html} from 'lit-html'
+import {html} from '../html-IoC'
 
 const data = {
   "alias": "vote",
@@ -28,11 +28,8 @@ const data = {
   }
 }
 
-const getUsers = (users) => html`
 
-`
-
-export const screenTemplate = [
-  header('Самый 🔎 внимательный разработчик', 'Спринт № 213'), 
-  html`<div class="vote__users">${[...data.data.users.map(user => person('vote',{ ...user, valueText: ''}, false)), button('vote', 'up'), button('vote', 'down')]}</div>`
-]
+export const screenTemplate = (data) => html`${[
+  header(data.title, data.subtitle), 
+  html`<div class="vote__users">${[...data.users.map(user => person('vote',{ ...user, valueText: ''}, false)), button('vote', 'up'), button('vote', 'down')]}</div>`
+]}`

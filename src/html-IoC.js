@@ -1,13 +1,15 @@
 /**
  * 
  * @param {String[]} strargs 
- * @param {*} args 
+ * @param {Array<String|String[]>} args 
+ * @returns {String}
  */
-const html = (strargs, args) => {
-    let res;
-    for(let i = 0; i < strargs.length; i++){
+export const html = (strargs, ...args) => {
+    let res = '';
+    for(let i = 0; i < strargs.length - 1; i++){
         res += strargs[i];
-        res += args[i];
+        res += Array.isArray(args[i]) ? args[i].reduce((accumulator, iterator) => accumulator + iterator, '') : args[i];
     }
+    res += strargs[strargs.length - 1]
     return res;
 }
