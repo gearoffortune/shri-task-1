@@ -1,0 +1,70 @@
+
+.diagram__categories {
+  display: flex;
+  flex-direction: column;
+}
+.diagram__categories__category {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1em 0;
+}
+
+.diagram__categories__category::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0.30000001192092896;
+  background: #BFBFBF;
+}
+
+.diagram__categories__category__nums, .diagram__categories__category__type {
+  display: inline-flex;
+  align-items: center;
+}
+.diagram__categories__category  .diagram__categories__category__type__color {
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  display: inline-block;
+}
+.diagram__categories__category__type__title {
+  display: inline;
+  padding-left: 1em;
+}
+.theme_dark .diagram__categories__category__type__title {
+  color: #FCFBF7;
+}
+.diagram__categories__category:nth-of-type(1) .diagram__categories__category__type__color {
+  background: radial-gradient(circle at 50% 50%, #FFB800 81%, #FFEF99 100%);
+  box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF;
+}
+.diagram__categories__category:nth-of-type(2) .diagram__categories__category__type__color {
+  background: radial-gradient(circle at 50% 50%, #FFB800 81%, #FFEF99 100%);
+  box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF;  
+}
+.diagram__categories__category:nth-of-type(3) .diagram__categories__category__type__color {
+  background: radial-gradient(circle at 50% 50%, #A6A6A6 83%, #CBCBCB 92%);
+  box-shadow: inset 0px 0px 20px 0px #696969,inset -1px 1px 1px 0px #FFFFFF;
+}
+.diagram__categories__category:nth-of-type(4) .diagram__categories__category__type__color {
+  background: radial-gradient(circle at 50% 50%, #A6A6A6 83%, #CBCBCB 92%);
+  box-shadow: inset 0px 0px 20px 0px #696969,inset -1px 1px 1px 0px #FFFFFF;
+}
+
+.diagram__categories__category__nums__change, .diagram__categories__category__nums__number {
+  display: inline-block;
+  color: #BFBFBF;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: right;
+  width: 4em;
+  height: 18px;
+  overflow: hidden;
+}
