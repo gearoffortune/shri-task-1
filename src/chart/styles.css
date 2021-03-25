@@ -26,31 +26,25 @@
   background: radial-gradient(circle at 50% 50%, #FFA300 0%, #2D1C00 100%);
   box-shadow: inset 0px 6px 15px 0px #FFA200,inset -1px 1px 1px 0px #FFFFFF;
 }
-
-body.theme_dark {
-  background-color: #080602;
-}
-
 .chart__chart {
   display: flex;
   justify-content: space-around;
-  right: 12px;
-  position: absolute;
 }
 
 @media (min-width: 577px) {
   .chart__chart {
-    left: 0;
-    right: 0;
     justify-content: space-between;
     padding: 0 8.7vw;
     height: 50vh;
+    margin-bottom: 24px;
   }
 }
 
 @media (max-width: 578px) {
   .chart__chart {
     height: 60vh;
+    right: 12px;
+    position: absolute;
   }
 }
 
@@ -71,17 +65,10 @@ body.theme_dark {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin: 0 12px;
   align-items: center;
 }
-
 .chart__leaders {
   display: flex;
-  position: absolute;
-  bottom: 0;
-  margin: 24px;
-  left: 0;
-  right: 0;
 }
 
 @media (max-width: 637px) {
@@ -92,6 +79,17 @@ body.theme_dark {
   }
   .chart__leaders {
     flex-direction: column;
+  }
+  .chart__chart__chartbar {
+    margin: 0 12px;
+  }
+  .chart__leaders {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin: 24px;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -106,11 +104,21 @@ body.theme_dark {
     height: 38px;
     width: 2px;
   }
+  .chart {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin: 24px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    }
 }
 
 .chart__leaders__leader {
   display: flex;
-  height: 38px;
+  height: 2em;
+  font-size: 20px;
 }
 
 .chart__leaders__spacer {
@@ -154,6 +162,8 @@ body.theme_dark {
 
 .chart__leaders__leader__img {
   border-radius: 50%;
+  height: 2em;
+  width: 2em;
 }
 
 .theme_dark .chart__chart__chartbar__value {

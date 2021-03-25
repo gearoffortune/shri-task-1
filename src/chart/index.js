@@ -33,7 +33,7 @@ const data = {
 }
 
 const chartbar = ({title, value, active}, ratio) => html`<div class="chart__chart__chartbar"><p class="chart__chart__chartbar__value${active ? ' chart__chart__chartbar__value--active' : ''}">${value===0 ? '' : value}</p>
-<div class="chart__chart__chartbar__bar${active ? ' chart__chart__chartbar__bar--active' : ''}"  style="height: calc(8px + ${ratio*70}%)"></div>
+<div class="chart__chart__chartbar__bar${active ? ' chart__chart__chartbar__bar--active' : ''}"  style="height: max(8px, ${ratio*70}%)"></div>
 <div class="chart__chart__chartbar__title">${title}</div></div>`
 
 const chartbars = (values) =>{
@@ -59,4 +59,4 @@ const chartleaders = (users) => html`<div class="chart__leaders"><div class="cha
   </div>
 </div></div>`
 
-export const screenTemplate = (data) => html`${[header(data.title, data.subtitle), chartbars(data.values), chartleaders(data.users)]}`
+export const screenTemplate = (data) => html`${[header(data.title, data.subtitle), html`<div class="chart">${[chartbars(data.values), chartleaders(data.users)]}</div>`]}`

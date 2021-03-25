@@ -3,10 +3,6 @@
   font-family: Roboto;
 }
 
-body.theme_dark {
-  background: radial-gradient(circle at 50% 50%, #130E00 0%, #000000 100%);
-}
-
 .barblocks {
   display: flex;
   align-items: flex-end;
@@ -65,7 +61,7 @@ body.theme_dark {
 }
 
 .theme_dark .barblock:nth-of-type(1) .ratings__bar {
-  background: radial-gradient(circle at 50% 50%, #FFA300 0%, #2D1C00 100%);
+  background: radial-gradient(91.67% 122.17% at 69.17% -11.17%, #FFA300 0%, #2D1C00 100%);
   box-shadow: inset 0px 6px 15px 0px #FFA200,inset -1px 1px 1px 0px #FFFFFF;
 }
 
@@ -132,8 +128,8 @@ body.theme_dark {
 }
 
 .theme_dark .ratings__bar {
-  background: radial-gradient(circle at 50% 50%, #000000 0%, #231900 0%, #4D4D4D 100%),linear-gradient(180deg, #000000 0%, #000000 100%);
-  box-shadow: inset 2px 2px 16px 0px #676767,inset -1px 1px 1px 0px #FFFFFF;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -2.22%, rgba(0, 0, 0, 0.8) 100%), radial-gradient(149.08% 95.38% at 38.75% 71.48%, #000000 0%, #231900 0.01%, #4D4D4D 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(103, 103, 103, 0.6);
 }
 .ratings__bar--leader {
   background: linear-gradient(-180deg, #FFF2D1 1%, #FFD66C 100%);

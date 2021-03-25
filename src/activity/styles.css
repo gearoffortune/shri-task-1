@@ -3,10 +3,6 @@
   flex-direction: column;
 } */
 
-body {
-  padding: 20px 24px;
-}
-
 .horizontal .activitychart {
   max-width: 424px;
   margin: 0 auto;
@@ -76,11 +72,11 @@ body {
 }
 
 .activitychart__activityrow:nth-child(2n+1) {
-  padding-left: calc(100%/24);
+  padding-right: calc(100%/24);
 }
 
 .activitychart__activityrow:nth-child(2n) {
-  padding-right: calc(100%/24);
+  padding-left: calc(100%/24);
 }
 
 .activitychart__activityrow__activityblock {
@@ -131,10 +127,6 @@ padding-top: calc((100% / 12) * 74 / 34);
 .theme_dark .activitychart__activityrow__activityblock--extra {
   /* background-image: url('../../assets/images/1x/extra-dark.png'); */
   background-image: url('../../assets/images/extra-dark.svg');
-}
-
-body.theme_dark {
-  background: radial-gradient(circle at 50% 50%, #120C01 0%, #000000 100%);
 }
 
 
