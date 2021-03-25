@@ -45,11 +45,11 @@
     margin-top: -24%;
   }
   
-  .activitychart__activityrow:nth-child(2n+1) {
+  .activitychart__activityrow:nth-child(2n) {
     padding-left: calc(100%/14);
   }
   
-  .activitychart__activityrow:nth-child(2n) {
+  .activitychart__activityrow:nth-child(2n+1) {
     padding-right: calc(100%/14);
   }
   
@@ -131,37 +131,6 @@ padding-top: calc((100% / 12) * 74 / 34);
 .theme_dark .activitychart__activityrow__activityblock--extra {
   /* background-image: url('../../assets/images/1x/extra-dark.png'); */
   background-image: url('../../assets/images/extra-dark.svg');
-}
-
-
-.theme_dark .header__mainheader {
-  color: #FCFBF7;
-  margin: 0;
-}
-
-.header__mainheader {
-  color: #261C00;
-font-family: Roboto;
-font-weight: 500;
-font-size: 30px;
-line-height: 32px;
-letter-spacing: 0px;
-text-align: left;
-
-}
-
-.theme_dark .header__secondaryheader {
-  color: #918F8A;
-}
-.header__secondaryheader {
-  color: #BFBFBF;
-font-family: Roboto;
-font-weight: 400;
-font-size: 16px;
-line-height: 18px;
-letter-spacing: 0px;
-text-align: left;
-
 }
 
 @media (min-width: 667px) {
