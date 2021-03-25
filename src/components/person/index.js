@@ -6,6 +6,7 @@ import './styles.css'
  * @param {import(../../../stories.d.ts).User} userObj
  * @param {boolean} isEmojiNeeded 
  * @param {string} emoji 
+ * @param {boolean} isActive
  * @returns 
  */
 export const person = (parentBlockName, {name, avatar, valueText, id}, isEmojiNeeded, emoji, isActive) => html`
