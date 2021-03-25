@@ -111,7 +111,7 @@ margin-bottom: 8px;
 .header__secondaryheader {
   color: #BFBFBF;
 font-family: Roboto;
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 18px;
 letter-spacing: 0px;
@@ -306,6 +306,8 @@ margin: 0;
 @media (max-width: 423px) {
   .activitychart--horizontal {
     display: none;
+    margin: 0 24px;
+  margin-top: 2px;
   }
   .scale__scaleblock--horizontal {
     display: none;
@@ -466,9 +468,9 @@ text-align: left;
 
 .scale__wrapper {
   position: absolute;
-bottom: 10px;
-width: calc(100% - 48px);
-
+  bottom: 10px;
+  right: 24px;
+  left: 24px;
 }
 
 .scale {
