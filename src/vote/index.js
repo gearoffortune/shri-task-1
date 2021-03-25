@@ -32,5 +32,5 @@ const data = {
 export const screenTemplate = (data) => html`${
   [
   header(data.title, data.subtitle), 
-  html`<div class="vote__users">${[...data.users.map(user => person('vote',{ ...user, valueText: ''}, user.id === data.selectedUserId, data.emoji, user.id === data.selectedUserId)), button('vote', 'up'), button('vote', 'down')]}</div>`
+  html`<div class="vote__users">${[...data.users.map(user => person('vote',{ ...user, valueText: ''}, user.id === data.selectedUserId, '👍' , user.id === data.selectedUserId)), button('vote', 'up', true), button('vote', 'down')]}</div>`
 ]}`

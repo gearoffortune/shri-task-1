@@ -93,6 +93,10 @@
   margin-left: -16px;
 }
 
+.barblock:nth-of-type(2n) .ratings__bar__position {
+  margin-left: calc(16px + 18px);
+}
+
 .barblock:nth-of-type(3){
   order: 0;
   z-index: 1;
@@ -104,6 +108,11 @@
 .barblock:nth-of-type(2n + 3) .ratings__bar {
   margin-right: -16px;
 }
+
+.barblock:nth-of-type(2n + 1) .ratings__bar__position {
+  margin-right: calc(16px + 18px);
+}
+
 .barblock:nth-of-type(4){
   order: 4;
 }
