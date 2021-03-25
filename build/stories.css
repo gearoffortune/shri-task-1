@@ -1,9 +1,11 @@
 .person__imgwrapper {
   position: relative;
+  height: 64px;
+  width: 64px;
 }
 .person__imgwrapper__emoji {
   position: absolute;
-  margin-top: -22px;
+  margin-top: -20px;
   left: 0;
   right: 0;
   color: #FCFBF7;
@@ -238,7 +240,7 @@ margin: 0;
   margin-right: -16px;
 }
 
-.barblock:nth-of-type(2n + 1) .ratings__bar__position {
+.barblock:nth-of-type(2n + 3) .ratings__bar__position {
   margin-right: calc(16px + 18px);
 }
 
