@@ -111,11 +111,11 @@ const scales = (ranges) => html`
   </div>
   <div class="scale__scaleblock">
     <div class="scale__scaleblock__colorblock scale__scaleblock__colorblock--mid"></div>
-    <p class="scale__scaleblock__desc">${ranges[1] +' — ' + ranges[2]}</p>
+    <p class="scale__scaleblock__desc">${ranges[1] +' — ' + (ranges[2]-1)}</p>
   </div>
   <div class="scale__scaleblock">
     <div class="scale__scaleblock__colorblock scale__scaleblock__colorblock--max"></div>
-    <p class="scale__scaleblock__desc">${ranges[2]+' — '+ranges[3]}</p>
+    <p class="scale__scaleblock__desc">${ranges[2]+' — '+(ranges[3]-1)}</p>
   </div>
   <div class="scale__scaleblock">
     <div class="scale__scaleblock__colorblock scale__scaleblock__colorblock--extra"></div>
