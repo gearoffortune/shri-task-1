@@ -219,7 +219,7 @@ margin: 0;
 
 
 .barblock:nth-of-type(2n) .ratings__bar {
-  margin-left: -12px;
+  margin-left: -16px;
 }
 
 .barblock:nth-of-type(3){
@@ -231,7 +231,7 @@ margin: 0;
   right: 6px;
 } */
 .barblock:nth-of-type(2n + 3) .ratings__bar {
-  margin-right: -12px;
+  margin-right: -16px;
 }
 .barblock:nth-of-type(4){
   order: 4;
