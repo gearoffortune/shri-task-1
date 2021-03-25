@@ -207,6 +207,7 @@
 }
 .selectedperson__position {
   margin-top: 6px;
+  margin-bottom: 16px;
 }
 .selectedperson__user__person__number.person__number {
   color: #261C00;
