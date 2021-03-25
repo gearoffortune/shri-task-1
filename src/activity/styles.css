@@ -94,42 +94,42 @@ padding-top: calc((100% / 12) * 74 / 34);
 
 .theme_light .activitychart__activityrow__activityblock--min {
   /* background-image: url('../../assets/images/1x/min-light.png'); */
-  background-image: url('../../assets/images/Min.svg');
+  background-image: url('../../assets/images/light/Min.svg');
 }
 
 .theme_light .activitychart__activityrow__activityblock--mid {
   /* background-image: url('../../assets/images/1x/mid-light.png'); */
-  background-image: url('../../assets/images/Mid.svg');
+  background-image: url('../../assets/images/light/Mid.svg');
 }
 
 .theme_light .activitychart__activityrow__activityblock--max {
   /* background-image: url('../../assets/images/1x/max-light.png'); */
-  background-image: url('../../assets/images/Max.svg');
+  background-image: url('../../assets/images/light/Max.svg');
 }
 
 .theme_light .activitychart__activityrow__activityblock--extra {
   /* background-image: url('../../assets/images/1x/extra-light.png'); */
-  background-image: url('../../assets/images/Extra.svg');
+  background-image: url('../../assets/images/light/Extra.svg');
 }
 
 .theme_dark .activitychart__activityrow__activityblock--min {
   /* background-image: url('../../assets/images/1x/min-dark.png'); */
-  background-image: url('../../assets/images/min-dark.svg');
+  background-image: url('../../assets/images/dark/Min.svg');
 }
 
 .theme_dark .activitychart__activityrow__activityblock--mid {
   /* background-image: url('../../assets/images/1x/mid-dark.png'); */
-  background-image: url('../../assets/images/mid-dark.svg');
+  background-image: url('../../assets/images/dark/Mid.svg');
 }
 
 .theme_dark .activitychart__activityrow__activityblock--max {
   /* background-image: url('../../assets/images/1x/max-dark.png'); */
-  background-image: url('../../assets/images/max-dark.svg');
+  background-image: url('../../assets/images/dark/Max.svg');
 }
 
 .theme_dark .activitychart__activityrow__activityblock--extra {
   /* background-image: url('../../assets/images/1x/extra-dark.png'); */
-  background-image: url('../../assets/images/extra-dark.svg');
+  background-image: url('../../assets/images/dark/Extra.svg');
 }
 
 @media (min-width: 667px) {
