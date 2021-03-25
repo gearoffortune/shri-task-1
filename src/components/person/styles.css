@@ -17,8 +17,8 @@
 }
 .person__imgwrapper__img {
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
+  height: 64px;
+  width: 64px;
 }
 
 .theme_dark .person__imgwrapper__img{
