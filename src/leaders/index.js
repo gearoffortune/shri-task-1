@@ -40,11 +40,11 @@ const bar = (position) => html`
 
 const userWithBar =(user, position, emoji, isActive) => html`
 <div class="barblock">
-  <div class="barblock__user">${leaders__person(user, position===0 , emoji)}</div>
+  <div class="barblock__user">${person('ratings', user, position===0 , emoji)}</div>
   <div class="barblock__bar">${bar(position+1)}</div>
 </div>
   ${isActive ? html`<div class="selectedperson">
-    <div class="selectedperson__user">${leaders__person(user, position===0 , emoji)}</div>
+    <div class="selectedperson__user">${person('selectedperson__user',user, true , '👍')}</div>
     <div class="selectedperson__position position">${position+1}</div>
   </div>` : html``}
 `

@@ -333,6 +333,18 @@ margin: 0;
 .selectedperson__user {
   position: relative;
   }
+.selectedperson__user__person.person {
+  padding-bottom: 11px;
+}
+.selectedperson__position {
+  margin-top: 6px;
+}
+.selectedperson__user__person__number.person__number {
+  color: #261C00;
+}
+.theme_dark .selectedperson__user__person__number.person__number {
+  color: #FCFBF7;
+ }
 /* .activitychart {
   display: flex;
   flex-direction: column;
