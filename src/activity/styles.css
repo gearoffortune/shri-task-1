@@ -34,7 +34,7 @@
     margin-top: 20px;
   }
   .scale {
-    width: calc(100% * (425/668));
+    width: calc(100% * (332/668));
     margin: 0 auto;
   }
 }
@@ -149,6 +149,12 @@ padding-top: calc((100% / 12) * 74 / 34);
   left: 20px;
 }
 
+@media (min-width: 667px) {
+  .scale__wrapper {
+    bottom: 58px;
+  }
+}
+
 .scale {
   display: flex;
   justify-content: space-between;
@@ -248,6 +254,6 @@ padding-top: calc((100% / 12) * 74 / 34);
   margin-top: 8px;
 }
 
-.scale__scaleblock:nth-of-type(1) .scale__scaleblock__desc {
+.scale__scaleblock__desc--dash {
   margin-top: 0;
 }

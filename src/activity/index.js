@@ -101,7 +101,7 @@ export const screenTemplate = (data) => {
 
 const hoursScaleDash = (hoursScale, orientation) => html`<div class="scale__scaleblock scale__scaleblock--${orientation}">
   <div class="scale__scaleblock__dash"></div>
-  <p class="scale__scaleblock__desc">${hoursScale}</p>
+  <p class="scale__scaleblock__desc scale__scaleblock__desc--dash">${hoursScale}</p>
 </div>`
 
 const scales = (ranges) => html`
