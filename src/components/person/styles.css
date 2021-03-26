@@ -40,21 +40,21 @@
 }
 
 .theme_dark .person:hover {
-  background: radial-gradient(circle at 50% 50%, #443A2A 0%, #000000 100%);
-  box-shadow: inset 2px 2px 16px 0px #FFFFFF,inset -1px 1px 1px 0px #FFFFFF;
+  background: radial-gradient(85.62% 148.33% at 49.85% 100%, rgba(68, 58, 42, 0.7864) 0%, rgba(0, 0, 0, 0.8) 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(255, 255, 255, 0.1);
 }
 .person:hover {
-  background: linear-gradient(-180deg, #F4F4F4 1%, #E9E9E9 100%, #EAEAEA 100%);
-  box-shadow: inset 0px 0px 20px 0px #CFCFCF,inset -1px 1px 1px 0px #FFFFFF;
+  background: linear-gradient(180deg, rgba(244, 244, 244, 0.9) 0.82%, #E9E9E9 100%, rgba(234, 234, 234, 0) 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
 }
 .person--active {
-  background: linear-gradient(-180deg, #FFF2D1 1%, #FFD66C 100%);
-  box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF;
+  background: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8);
 }
 
 .theme_dark .person--active {
-  background: radial-gradient(circle at 50% 50%, #FFA300 0%, #2D1C00 100%);
-  box-shadow: inset 0px 6px 15px 0px #FFA200,inset -1px 1px 1px 0px #FFFFFF;
+  background: radial-gradient(91.67% 122.17% at 69.17% -11.17%, #FFA300 0%, #2D1C00 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4);
 }
 
 .person__name {
