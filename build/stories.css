@@ -383,11 +383,13 @@ margin: 0;
   }
   .scale {
     width: calc(100% * (332/668));
-    margin: 0 auto;
   }
 }
 
 @media (max-width: 423px) {
+  .scale {
+    width: calc(328/375 * 100%);
+  }
   .activitychart__activityrow:not(.activitychart__activityrow:nth-child(1)){
     top: 0;
     margin-top: -24%;
@@ -493,21 +495,20 @@ padding-top: calc((100% / 12) * 74 / 34);
 .scale__wrapper {
   position: absolute;
   bottom: 24px;
-  right: 20px;
-  left: 20px;
+  right: 0;
+  left: 0;
 }
 
 @media (min-width: 667px) {
   .scale__wrapper {
     bottom: 58px;
-    right: 0;
-    left: 0;
   }
 }
 
 .scale {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 
