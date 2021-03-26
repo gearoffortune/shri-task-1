@@ -17,3 +17,4 @@ const renderTemplate = (alias, data) => {
   return templates[alias](data);
 }
 window.renderTemplate = renderTemplate;
+window.renderI(9)

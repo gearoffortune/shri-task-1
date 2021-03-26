@@ -561,6 +561,7 @@ padding-top: calc((100% / 12) * 74 / 34);
   height: 4px;
   border: 0px solid;
   top: -7px;
+  right: -2px;
 }
 
 .scale__scaleblock__dash, .scale__scaleblock__dash::before, .scale__scaleblock__dash::after {
