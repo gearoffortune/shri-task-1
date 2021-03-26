@@ -47,7 +47,7 @@ const userWithBar =(user, position, emoji, isActive) => html`
 export const screenTemplate = (data) => html`${[
   header(data.title, data.subtitle), 
   html`<div class="barblocks">${data.users.map((user, i) => userWithBar(user, i, data.emoji, data.selectedUserId===user.id))}</div>`,
-  html`<div class="selectedperson">
-    <div class="selectedperson__user">${person('selectedperson__user',data.users[data.selectedUserId], true , '👍')}</div>
+  html`${data.selectedUserId ? html`<div class="selectedperson">
+    <div class="selectedperson__user">${person('selectedperson__user',data.users.filter(user => data.selectedUserId===user.id)[0], true , '👍')}</div>
     <div class="selectedperson__position position">${data.users.findIndex((user) => user.id===data.selectedUserId) + 1}</div>
-  </div>`]}`
+  </div>` : ''}`]}`
