@@ -151,6 +151,8 @@ padding-top: calc((100% / 12) * 74 / 34);
 @media (min-width: 667px) {
   .scale__wrapper {
     bottom: 58px;
+    right: 0;
+    left: 0;
   }
 }
 
@@ -222,7 +224,11 @@ padding-top: calc((100% / 12) * 74 / 34);
 
 .scale__scaleblock {
   width: 100px;
-  margin: 0 4px;
+  margin-right: 8px;
+}
+
+.scale__scaleblock:nth-last-of-type(1) {
+  margin-right: 0;
 }
 
 .scale__scaleblock__colorblock {
