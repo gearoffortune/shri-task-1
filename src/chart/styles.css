@@ -167,6 +167,10 @@
   width: 2em;
 }
 
+.theme_dark chart__leaders__leader__img {
+  filter: grayscale();
+}
+
 .theme_dark .chart__chart__chartbar__value {
   color: #918F8A;
 }
