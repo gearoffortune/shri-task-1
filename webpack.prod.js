@@ -1,3 +1,4 @@
+const path = require('path');
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -28,8 +29,7 @@ module.exports = merge(common, {
     // Extracts CSS into separate files
     // Note: style-loader is for development, MiniCssExtractPlugin is for production
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].css',
-      chunkFilename: '[id].css',
+      filename: 'stories.css',
     }),
   ],
   optimization: {
@@ -41,4 +41,8 @@ module.exports = merge(common, {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
+  output: {
+    filename: "stories.js", 
+    path: path.resolve(__dirname, 'build'),
+  }
 })

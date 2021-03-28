@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
   // Set the mode to development or production
@@ -36,5 +37,6 @@ module.exports = merge(common, {
   plugins: [
     // Only update what has changed on hot reload
     new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({ filename: 'index.html', chunks: ['index'], template: 'src/index.html', title: 'test' }),
   ],
 })
