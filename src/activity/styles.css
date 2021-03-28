@@ -47,17 +47,17 @@
   }
   
   .activitychart__activityrow:nth-child(2n) {
-    padding-left: calc(100%/14);
+    padding-left: calc((100%/14) - 2px);
   }
   
   .activitychart__activityrow:nth-child(2n+1) {
-    padding-right: calc(100%/14);
+    padding-right: calc((100%/14) - 2px);
   }
   
   .activitychart__activityrow__activityblock {
     height: 0;
     width: 100%;
-    padding-top: calc(( 74.5 / 34 ) * ( 100% / 7 ));
+    padding-top: calc(( 74 / 34 ) * ( 100% / 7 ));
     flex-grow: 1;
     position: relative;
     background-position: bottom;
