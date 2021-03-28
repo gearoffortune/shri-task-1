@@ -3,6 +3,7 @@ import {screenTemplate as activity} from './activity'
 import {screenTemplate as chart} from './chart'
 import {screenTemplate as diagram} from './diagram'
 import {screenTemplate as vote} from './vote'
+import {donut} from './components/donut'
 import './fonts.css'
 import data from '../data.json'
 import './body_dark.css'
@@ -17,4 +18,4 @@ const renderTemplate = (alias, data) => {
   return templates[alias](data);
 }
 window.renderTemplate = renderTemplate;
-window.renderI(9)
+document.body.innerHTML = donut;
