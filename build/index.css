@@ -244,7 +244,7 @@ margin: 0;
   margin-bottom: 6px;
 }
 .ratings__person__name {
-  margin: 5px 4px 6px 4px;
+  margin: 6px 4px 4px 4px;
 }
 .barblock:nth-of-type(2n + 3) .ratings__bar {
   margin-right: -16px;
@@ -265,6 +265,7 @@ margin: 0;
 }
 .barblock__bar {
   overflow: hidden;
+  margin-top: 2px;
   }
 .ratings__bar {
   display: inline-block;
