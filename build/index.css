@@ -245,7 +245,6 @@ margin: 0;
 }
 .ratings__person__name {
   margin: 5px 4px 6px 4px;
-  font-weight: 400;
 }
 .barblock:nth-of-type(2n + 3) .ratings__bar {
   margin-right: -16px;
