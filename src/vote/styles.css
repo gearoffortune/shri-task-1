@@ -65,10 +65,14 @@
   .vote__person__wrapper:nth-of-type(1){
     order: -2;
     height: 100%;
+    position: relative;
+    right: 1px;
   }
   .vote__person__wrapper:nth-of-type(4){
     order: 2;
     height: 100%;
+    position: relative;
+    left: 1px;
   }
   .vote__person__wrapper:nth-of-type(3n + 2){
     order: -1;
@@ -86,4 +90,8 @@
   .vote__button {
     display: none;
   }
+.vote__buttonwrapper__button.button--down {
+  position: relative;
+  top: 2px;
+}
 }
