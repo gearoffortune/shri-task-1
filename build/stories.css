@@ -1017,6 +1017,9 @@ padding-top: calc((100% / 12) * 74 / 34);
 .vote__person__number {
   display: none;
 }
+.vote__person__name.person__name {
+  margin: 5px 4px 3px 4px;
+}
 @media (max-height: 660px) {
   .vote__users {
     display: flex;
