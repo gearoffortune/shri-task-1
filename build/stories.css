@@ -656,9 +656,17 @@ padding-top: calc((100% / 12) * 74 / 34);
   font-family: Roboto;
 }
 
+.chart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .chart__chart__chartbar__bar {
   border-radius: 6px;
   width: 40px;
+  flex-shrink: 0;
 }
 
 .theme_light .chart__chart__chartbar__bar {
@@ -688,18 +696,19 @@ padding-top: calc((100% / 12) * 74 / 34);
 @media (min-width: 577px) {
   .chart__chart {
     justify-content: space-between;
-    padding: 0 8.7vw;
-    height: 50vh;
-    margin-bottom: 24px;
+    padding: 0 5vw;
+    height: 167px;
+    margin-bottom: 12px;
   }
 }
 
 @media (max-width: 578px) {
   .chart__chart {
     height: 60vh;
-    right: 12px;
-    position: absolute;
-    padding-top: 42px;
+    right: 112px;
+    position: relative;
+    padding-top: 17px;
+    top: 12px;
   }
 }
 
@@ -740,20 +749,18 @@ padding-top: calc((100% / 12) * 74 / 34);
   }
   .chart__leaders {
     display: flex;
-    position: absolute;
-    bottom: 0;
     margin: 24px;
-    left: 0;
-    right: 0;
   }
 }
 
 @media (min-width: 638px) {
   .chart__leaders {
     justify-content: center;
+    padding-left: 8px;
   }
   .chart__leaders__leader {
-    margin: 0 16px;
+    padding-right: 57px;
+    padding-left: 16px;
   }
   .chart__leaders__spacer {
     height: 38px;
@@ -784,6 +791,7 @@ padding-top: calc((100% / 12) * 74 / 34);
 .chart__leaders__leader__meta {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-left: 14px;
 }
 
