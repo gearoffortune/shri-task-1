@@ -105,15 +105,17 @@
 @media (min-width: 638px) {
   .chart__leaders {
     justify-content: center;
-    padding-left: 8px;
+    padding-left: 9px;
+    margin: 0 auto;
   }
   .chart__leaders__leader {
-    padding-right: 57px;
-    padding-left: 16px;
+    padding-right: 42px;
+    margin-left: 0;
   }
   .chart__leaders__spacer {
     height: 40px;
     width: 2px;
+    margin: 0 16px;
   }
   .chart {
     display: flex;
@@ -142,6 +144,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin-left: 14px;
+  flex-shrink: 0;
 }
 
 .theme_dark .chart__leaders__leader__meta__name {
@@ -176,6 +179,7 @@
   border-radius: 50%;
   height: 2em;
   width: 2em;
+  flex-shrink: 0;
 }
 
 .theme_dark .chart__leaders__leader__img {
