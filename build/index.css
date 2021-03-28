@@ -696,7 +696,7 @@ padding-top: calc((100% / 12) * 74 / 34);
 @media (min-width: 577px) {
   .chart__chart {
     justify-content: space-between;
-    padding: 0 5vw;
+    padding: 0 34px;
     height: 167px;
     margin-bottom: 12px;
   }
@@ -763,7 +763,7 @@ padding-top: calc((100% / 12) * 74 / 34);
     padding-left: 16px;
   }
   .chart__leaders__spacer {
-    height: 38px;
+    height: 40px;
     width: 2px;
   }
   .chart {
@@ -806,7 +806,7 @@ padding-top: calc((100% / 12) * 74 / 34);
 .chart__leaders__leader__meta__name {
   color: #261C00;
   font-family: Roboto;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 0px;
@@ -816,7 +816,7 @@ padding-top: calc((100% / 12) * 74 / 34);
 .chart__leaders__leader__meta__text {
   color: #BFBFBF;
   font-family: Roboto;
-  font-weight: regular;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0px;
