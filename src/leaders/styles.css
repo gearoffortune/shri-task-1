@@ -108,6 +108,12 @@
   position: relative;
   right: 6px;
 } */
+.retings__person__number {
+  margin-bottom: 6px;
+}
+.ratings__person__name {
+  margin: 4px 4px 5px 4px;
+}
 .barblock:nth-of-type(2n + 3) .ratings__bar {
   margin-right: -16px;
 }
