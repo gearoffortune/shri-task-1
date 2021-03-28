@@ -51,6 +51,7 @@
     height: calc(146px*2 + 4px);
     justify-content: space-between;
     align-items: center;
+    margin: 0 16px
   }
   .vote__person__wrapper {
     display: flex;
