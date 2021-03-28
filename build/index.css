@@ -1017,19 +1017,15 @@ padding-top: calc((100% / 12) * 74 / 34);
 .vote__person__number {
   display: none;
 }
-.vote__person__name.person__name {
-  margin: 5px 4px 3px 4px;
-}
 @media (max-height: 660px) {
   .vote__users {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: calc(146px*2 + 4px);
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0 16px;
-    padding: 4px 0;
   }
   .vote__person__wrapper {
     display: flex;
@@ -1067,10 +1063,6 @@ padding-top: calc((100% / 12) * 74 / 34);
   .vote__button {
     display: none;
   }
-.vote__buttonwrapper__button.button--down {
-  position: relative;
-  top: 2px;
-}
 }
 *,
 *::after,
