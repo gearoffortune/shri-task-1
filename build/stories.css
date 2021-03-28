@@ -1003,7 +1003,8 @@ padding-top: calc((100% / 12) * 74 / 34);
     height: calc(146px*2 + 4px);
     justify-content: space-between;
     align-items: center;
-    margin: 0 16px
+    margin: 0 16px;
+    padding: 4px 0;
   }
   .vote__person__wrapper {
     display: flex;
