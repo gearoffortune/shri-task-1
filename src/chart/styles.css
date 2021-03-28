@@ -167,7 +167,7 @@
   width: 2em;
 }
 
-.theme_dark chart__leaders__leader__img {
+.theme_dark .chart__leaders__leader__img {
   filter: grayscale();
 }
 
