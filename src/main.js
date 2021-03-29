@@ -19,4 +19,8 @@ const renderTemplate = (alias, data) => {
   return templates[alias](data);
 };
 window.renderTemplate = renderTemplate;
-renderI(8);
+const parsedUrl = new URL(window.location.href);
+const slide = parsedUrl.searchParams.get("slide");
+const theme = parsedUrl.searchParams.get("theme");
+document.body.classList.replace("theme_dark", `theme_${theme}`);
+renderI(slide);
