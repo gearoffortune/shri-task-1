@@ -1,6 +1,7 @@
 import {header} from '../components/header'
 import './styles.css'
 import {html} from '../html-IoC'
+import {donut} from '../components/my-donut'
 
 const data = {
   "alias": "diagram",
@@ -29,14 +30,16 @@ const category = (category) => html`  <div class="diagram__categories__category"
 </div>
 </div>`
 
-const diagram = (categories) => {
+const diagram = (categories, totalText, differenceText) => {
   const categoriesWithNums = categories.map(category => parseInt(category.valueText));
   const sum = categoriesWithNums.reduce((acc, iter) => acc + iter );
   const shares = categoriesWithNums.map(category => category/sum);
+  return donut('diagram',...shares, totalText, differenceText);
 }
 
 const diagramCategories = (categories) => html`<div class="diagram__categories">
 ${categories.map(cat => category(cat))}
 </div>`
 
-export const screenTemplate = (data) => html`${[header(data.title, data.subtitle), diagramCategories(data.categories)]}`
+export const screenTemplate = (data) => html`${[header(data.title, data.subtitle),
+  html`<div class="diagram">${[diagram(data.categories, data.totalText, data.differenceText), diagramCategories(data.categories)]}</div>`]}`

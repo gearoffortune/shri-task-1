@@ -7,7 +7,7 @@
 .donut {
   --donut-size: 300px;
   --donut-border-width: 20px;
-  --donut-spacing: 0;
+  --donut-spacing: 1;
   --donut-spacing-color: 255, 255, 255;
   --donut-spacing-deg: calc(1deg * var(--donut-spacing));
   border-radius: 50%;
@@ -15,6 +15,10 @@
   width: var(--donut-size);
   margin: 40px;
   position: relative;
+}
+
+.theme_dark .donut__label {
+  background: radial-gradient(70.24% 70.24% at 49.87% 29.76%, rgba(18, 12, 1, 0.9) 0%, #000 100%) content-box content-box;
 }
 
 .donut__label {
@@ -26,7 +30,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: white;
   border-radius: 50%;
   padding: 20px;
   background-clip: content-box;
@@ -34,21 +37,39 @@
 }
 
 .donut__label__heading {
-  font-size: 24px;
-  font-weight: 600;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 32px;
+  text-align: center;
+  color: #261C00;
+  
+}
+
+.theme_dark .donut__label__heading {
+  color: #FCFBF7;
+
 }
 
 .donut__label__sub {
-  color: #666666;
-  font-size: 14px;
-  letter-spacing: 0.05em;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #BFBFBF;
+}
+
+.theme_dark .donut__label__sub {
+  color: #918F8A;
 }
 
 .donut__slice {
   height: 100%;
   width: 100%;
   position: absolute;
-  background: white;
   border-radius: 50%;
   background-clip: content-box;
   background-origin: content-box;
@@ -73,11 +94,6 @@
   box-shadow: 0 0 1px 0 rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
 }
 
-.donut__slice::after {  
-  background-clip: border-box !important;
-  background-origin: border-box !important;
-}
-
 .donut__slice__first {
   --first-start: 0;
 }
@@ -92,7 +108,7 @@
   border-right-color: rgba(255, 104, 56, calc(100 * (var(--first) - .25)));
   border-bottom-color: rgba(255, 104, 56, calc(100 * (var(--first) - .5)));
   border-left-color: rgba(255, 104, 56, calc(100 * (var(--first) - .75))); */
-  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%, rgba(255, 184, 0, 0.56) 81.25%, rgba(255, 239, 153, 0.32) 100%);
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%, rgba(255, 184, 0, 0.56) 81.25%, rgba(255, 239, 153, 0.32) 100%) border-box border-box;
   box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF;
   transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
 }

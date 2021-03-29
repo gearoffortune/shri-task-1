@@ -1,0 +1,101 @@
+.mydonut {
+  height: 328px;
+  width: 328px;
+  position: relative;
+  margin: 32px auto;
+
+  --width: 70%;
+}
+.mydonut__slice {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.theme_dark .mydonut__slice:nth-child(1) {
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%,transparent 0, transparent var(--width), rgba(255, 163, 0, 0.8) 71.88%, rgba(91, 58, 0, 0.8) 100%);
+  box-shadow: 0px 0px 20px -8px rgba(248, 158, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 162, 0, 0.9);
+}
+
+.theme_dark .mydonut__slice:nth-child(2) {
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%,transparent 0, transparent var(--width), rgba(99, 63, 0, 0.5) 72.92%, rgba(15, 9, 0, 0.5) 100%);
+  box-shadow: 0px 0px 20px -8px rgba(147, 93, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(202, 129, 0, 0.9);
+}
+
+.theme_dark .mydonut__slice:nth-child(3) {
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%,transparent 0, transparent var(--width), rgba(155, 155, 155, 0.5) 71.88%, rgba(56, 41, 0, 0.5) 100%);
+  box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(139, 139, 139, 0.9);
+}
+
+.theme_dark .mydonut__slice:nth-child(4) {
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%,transparent 0, transparent var(--width), rgba(77, 77, 77, 0.5) 71.88%, rgba(56, 41, 0, 0.5) 100%);
+  box-shadow: 0px 0px 20px -8px rgba(96, 96, 96, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(38, 38, 38, 0.9);
+}
+
+.theme_light .mydonut__slice:nth-child(1) {
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%,transparent 0, transparent var(--width), rgba(255, 239, 153, 0.32) var(--width), rgba(255, 184, 0, 0.56) 81.25%, rgba(255, 239, 153, 0.32) 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.9);
+}
+
+.theme_light .mydonut__slice:nth-child(2) {
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%,transparent 0, transparent var(--width), rgba(255, 239, 153, 0.12) var(--width), rgba(255, 184, 0, 0.24) 81.25%, rgba(255, 239, 153, 0.12) 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4);
+}
+
+.theme_light .mydonut__slice:nth-child(3) {
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%,transparent 0, transparent var(--width), rgba(203, 203, 203, 0.05) var(--width), rgba(166, 166, 166, 0.1725) 82.81%, rgba(203, 203, 203, 0.05) 92.19%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(105, 105, 105, 0.2);
+}
+
+.theme_light .mydonut__slice:nth-child(4) {
+  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%,transparent 0, transparent var(--width), rgba(228, 228, 228, 0.1) var(--width), rgba(191, 191, 191, 0.345) 82.81%, rgba(228, 228, 228, 0.1) 92.19%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(131, 131, 131, 0.6);
+}
+
+.mydonut__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background-clip: content-box;
+  text-align: center;
+  
+}
+
+.mydonut__label__heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 32px;
+  text-align: center;
+  color: #261C00;
+  padding: 0 82px;
+  margin-bottom: 8px;
+}
+
+.theme_dark .mydonut__label__heading {
+  color: #FCFBF7;
+
+}
+
+.mydonut__label__sub {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #BFBFBF;
+  padding: 0 82px;
+}
+
+.theme_dark .mydonut__label__sub {
+  color: #918F8A;
+}
