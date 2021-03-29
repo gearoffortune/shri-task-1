@@ -1,10 +1,10 @@
-@media (min-height: 665px) {
+@media (max-width: 500px) {
   .vote__person__wrapper:nth-of-type(n+9) {
     display: none;
   }
 
   .vote__users--vertical {
-    height: 526px;
+    height: calc(100vh * 526/668);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,7 +59,7 @@
 .vote__person__number {
   display: none;
 }
-@media (max-height: 660px) {
+@media (min-width: 501px) {
   .vote__users--vertical {
     display: none;
   }

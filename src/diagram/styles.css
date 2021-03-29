@@ -99,25 +99,28 @@
   overflow: hidden;
 }
 
+.diagram {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 @media (min-width: 424px) {
   .diagram {
     display: flex;
     margin: 0 42px;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 296px;
+    height: calc(100vh * 296/376)
   }
   .diagram__categories {
     margin: 0;
     width: 304px;
   }
   .diagram__mydonut.mydonut {
-    height: 240px;
-    width: 240px;
+    height: min(100vh * 240/376, 240px);
+    width: min(100vh * 240/376, 240px);
     margin: 0;
   }
   .diagram__mydonut__label__heading.mydonut__label__heading {

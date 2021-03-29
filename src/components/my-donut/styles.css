@@ -1,8 +1,8 @@
 .mydonut {
-  height: 328px;
-  width: 328px;
+  height: calc(100vh * 328/668);
+  width: calc(100vh * 328/668);
   position: relative;
-  margin: 32px auto;
+  margin: calc(100vh * 32/668) auto;
 
   --width: 70%;
 }
