@@ -68,9 +68,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: calc(146px*2 + 4px);
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 0 16px;
+    margin: 1px 16px;
     position: absolute;
     bottom: 0;
     left: 0;
