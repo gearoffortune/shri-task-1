@@ -7,6 +7,7 @@ import "./styles.css";
  * @param {boolean} isEmojiNeeded
  * @param {string} emoji
  * @param {boolean} isActive
+ * @param {object} dataParams
  * @returns
  */
 export const person = (
@@ -14,9 +15,13 @@ export const person = (
   { name, avatar, valueText, id },
   isEmojiNeeded,
   emoji,
-  isActive
+  isActive,
+  dataParams
 ) => html` <div
   class="${parentBlockName}__person person ${isActive ? "person--active" : ""}"
+  ${dataParams
+    ? `data-action='update' data-params='${JSON.stringify(dataParams)}'`
+    : ""}
 >
   <div class="${parentBlockName}__person__imgwrapper person__imgwrapper">
     ${isEmojiNeeded
