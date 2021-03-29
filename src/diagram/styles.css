@@ -43,6 +43,10 @@
 .diagram__categories__category__type__title {
   display: inline;
   padding-left: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
 }
 .theme_dark .diagram__categories__category__type__title {
   color: #FCFBF7;
