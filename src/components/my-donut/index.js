@@ -59,7 +59,7 @@ export const donut = (parentBlockName, extraShare, maxShare, midShare, minShare,
       return res + `, calc((1 + ${Math.tan(angleTwo)})*50%) 0% , 50% 50%`
     }
   }
-  return html`<div class="${parentBlockName}__mydonut mydonut" style="--first: ${extraShare}; --second: ${maxShare}; --third: ${midShare}; --fourth: ${minShare}">
+  return html`<div class="${parentBlockName}__mydonut mydonut">
 <div class="${parentBlockName}__mydonut__slice mydonut__slice mydonut__slice__first" 
 style="clip-path: polygon(${getCoordinates(-degs[0]/2, degs[0]/2)});"></div>
 <div class="${parentBlockName}__mydonut__slice mydonut__slice mydonut__slice__second" 
