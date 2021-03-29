@@ -8,7 +8,7 @@
   margin-top: -20px;
   left: 0;
   right: 0;
-  color: #FCFBF7;
+  color: #fcfbf7;
   font-family: Roboto;
   font-weight: bold;
   font-size: 32px;
@@ -23,7 +23,7 @@
   width: 64px;
 }
 
-.theme_dark .person__imgwrapper__img{
+.theme_dark .person__imgwrapper__img {
   filter: grayscale();
 }
 
@@ -41,25 +41,42 @@
 }
 
 .theme_dark .person:hover {
-  background: radial-gradient(85.62% 148.33% at 49.85% 100%, rgba(68, 58, 42, 0.7864) 0%, rgba(0, 0, 0, 0.8) 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(255, 255, 255, 0.1);
+  background: radial-gradient(
+    85.62% 148.33% at 49.85% 100%,
+    rgba(68, 58, 42, 0.7864) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2),
+    inset 2px 2px 16px rgba(255, 255, 255, 0.1);
 }
 .person:hover {
-  background: linear-gradient(180deg, rgba(244, 244, 244, 0.9) 0.82%, #E9E9E9 100%, rgba(234, 234, 234, 0) 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
+  background: linear-gradient(
+    180deg,
+    rgba(244, 244, 244, 0.9) 0.82%,
+    #e9e9e9 100%,
+    rgba(234, 234, 234, 0) 100%
+  );
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 20px rgba(207, 207, 207, 0.5);
 }
 .person--active {
-  background: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8);
+  background: linear-gradient(180deg, #fff2d1 0.82%, #ffd66c 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 20px rgba(255, 176, 57, 0.8);
 }
 
 .theme_dark .person--active {
-  background: radial-gradient(91.67% 122.17% at 69.17% -11.17%, #FFA300 0%, #2D1C00 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4);
+  background: radial-gradient(
+    91.67% 122.17% at 69.17% -11.17%,
+    #ffa300 0%,
+    #2d1c00 100%
+  );
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4),
+    inset 0px 6px 15px rgba(255, 162, 0, 0.4);
 }
 
 .person__name {
-  color: #261C00;
+  color: #261c00;
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
@@ -70,7 +87,7 @@
 }
 
 .person__number {
-  color: #BFBFBF;
+  color: #bfbfbf;
   font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
@@ -81,9 +98,9 @@
 }
 
 .theme_dark .person__name {
-  color: #FCFBF7;
+  color: #fcfbf7;
 }
 
 .theme_dark .person__number {
-  color: #918F8A;
+  color: #918f8a;
 }

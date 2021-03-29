@@ -16,23 +16,42 @@
 }
 
 .theme_light .chart__chart__chartbar__bar {
-  background: linear-gradient(180deg, rgba(244, 244, 244, 0.9) 0.82%, #E9E9E9 100%, rgba(234, 234, 234, 0) 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
+  background: linear-gradient(
+    180deg,
+    rgba(244, 244, 244, 0.9) 0.82%,
+    #e9e9e9 100%,
+    rgba(234, 234, 234, 0) 100%
+  );
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 20px rgba(207, 207, 207, 0.5);
 }
 
 .theme_light .chart__chart__chartbar__bar--active {
-  background: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8);
+  background: linear-gradient(180deg, #fff2d1 0.82%, #ffd66c 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 20px rgba(255, 176, 57, 0.8);
 }
 
 .theme_dark .chart__chart__chartbar__bar {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), radial-gradient(149.08% 93.3% at 38.75% 72.1%, #000000 0%, #231900 0.01%, #4D4D4D 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(103, 103, 103, 0.6);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    radial-gradient(
+      149.08% 93.3% at 38.75% 72.1%,
+      #000000 0%,
+      #231900 0.01%,
+      #4d4d4d 100%
+    );
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2),
+    inset 2px 2px 16px rgba(103, 103, 103, 0.6);
 }
 
 .theme_dark .chart__chart__chartbar__bar--active {
-  background: radial-gradient(81.14% 100% at 50% 0%, #FFA300 0%, #2D1C00 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.5);
+  background: radial-gradient(81.14% 100% at 50% 0%, #ffa300 0%, #2d1c00 100%);
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4),
+    inset 0px 6px 15px rgba(255, 162, 0, 0.5);
 }
 .chart__chart {
   display: flex;
@@ -59,12 +78,12 @@
 }
 
 .theme_dark .chart__chart__chartbar__title {
-  color: #918F8A;
+  color: #918f8a;
 }
 
 .chart__chart__chartbar__title {
   text-align: center;
-  color: #BFBFBF;
+  color: #bfbfbf;
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
@@ -125,7 +144,7 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    }
+  }
 }
 
 .chart__leaders__leader {
@@ -136,7 +155,7 @@
 
 .chart__leaders__spacer {
   opacity: 0.30000001192092896;
-  background: #BFBFBF;
+  background: #bfbfbf;
 }
 
 .chart__leaders__leader__meta {
@@ -148,15 +167,15 @@
 }
 
 .theme_dark .chart__leaders__leader__meta__name {
-  color: #FCFBF7;
+  color: #fcfbf7;
 }
 
 .theme_dark .chart__leaders__leader__meta__text {
-  color: #918F8A;
+  color: #918f8a;
 }
 
 .chart__leaders__leader__meta__name {
-  color: #261C00;
+  color: #261c00;
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
@@ -166,7 +185,7 @@
 }
 
 .chart__leaders__leader__meta__text {
-  color: #BFBFBF;
+  color: #bfbfbf;
   font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
@@ -187,12 +206,12 @@
 }
 
 .theme_dark .chart__chart__chartbar__value {
-  color: #918F8A;
+  color: #918f8a;
 }
 
 .chart__chart__chartbar__value {
   text-align: center;
-  color: #BFBFBF;
+  color: #bfbfbf;
   font-family: Roboto;
   font-weight: bold;
   font-size: 20px;
@@ -203,15 +222,15 @@
 }
 
 .theme_dark .chart__chart__chartbar__value {
-  color: #918F8A;
+  color: #918f8a;
 }
 
 .theme_dark .chart__chart__chartbar__value--active {
-  color: #FCFBF7;
+  color: #fcfbf7;
 }
 
 .theme_light .chart__chart__chartbar__value--active {
-  color: #261C00;
+  color: #261c00;
 }
 
 .chart__chart__chartbar__value--active {

@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const babel = require('babel-loader');
+var PrettierPlugin = require("prettier-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -15,6 +16,7 @@ module.exports = {
         new CopyPlugin({ patterns: ['assets'] }),
 
         new MiniCssExtractPlugin(),
+        new PrettierPlugin,
     ],
     module: {
         rules: [

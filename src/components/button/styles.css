@@ -1,5 +1,5 @@
 .button {
-  background-image: url('../../../assets/images/button-hover-light.svg');
+  background-image: url("../../../assets/images/button-hover-light.svg");
   background-repeat: no-repeat;
   background-size: contain;
   height: 64px;
@@ -7,8 +7,9 @@
   background-position: center;
 }
 
-.button:hover, .button.button--disabled{  
-  background-image: url('../../../assets/images/button-light.svg');
+.button:hover,
+.button.button--disabled {
+  background-image: url("../../../assets/images/button-light.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -18,8 +19,9 @@
 }
 
 .theme_dark .button {
-  background-image: url('../../../assets/images/button-dark.svg');
+  background-image: url("../../../assets/images/button-dark.svg");
 }
-.theme_dark .button:hover, .theme_dark .button.button--disabled {
-  background-image: url('../../../assets/images/button-hover-dark.svg');
+.theme_dark .button:hover,
+.theme_dark .button.button--disabled {
+  background-image: url("../../../assets/images/button-hover-dark.svg");
 }

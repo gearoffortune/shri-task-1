@@ -1,4 +1,3 @@
-
 .diagram__categories {
   display: flex;
   flex-direction: column;
@@ -20,21 +19,22 @@
 }
 
 .diagram__categories__category:not(.diagram__categories__category:nth-last-child(1)):after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 2px;
   opacity: 0.30000001192092896;
-  background: #BFBFBF;
+  background: #bfbfbf;
 }
 
-.diagram__categories__category__nums, .diagram__categories__category__type {
+.diagram__categories__category__nums,
+.diagram__categories__category__type {
   display: inline-flex;
   align-items: center;
 }
-.diagram__categories__category  .diagram__categories__category__type__color {
+.diagram__categories__category .diagram__categories__category__type__color {
   height: 1em;
   width: 1em;
   border-radius: 50%;
@@ -49,45 +49,78 @@
   font-size: 16px;
 }
 .theme_dark .diagram__categories__category__type__title {
-  color: #FCFBF7;
+  color: #fcfbf7;
 }
-.diagram__categories__category:nth-of-type(1) .diagram__categories__category__type__color {
-  background: radial-gradient(circle at 50% 50%, #FFB800 81%, #FFEF99 100%);
-  box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF;
+.diagram__categories__category:nth-of-type(1)
+  .diagram__categories__category__type__color {
+  background: radial-gradient(circle at 50% 50%, #ffb800 81%, #ffef99 100%);
+  box-shadow: inset 0px 0px 20px 0px #ffb039, inset -1px 1px 1px 0px #ffffff;
 }
-.diagram__categories__category:nth-of-type(2) .diagram__categories__category__type__color {
-  background: radial-gradient(circle at 50% 50%, #FFB800 81%, #FFEF99 100%);
-  box-shadow: inset 0px 0px 20px 0px #FFB039,inset -1px 1px 1px 0px #FFFFFF;  
+.diagram__categories__category:nth-of-type(2)
+  .diagram__categories__category__type__color {
+  background: radial-gradient(circle at 50% 50%, #ffb800 81%, #ffef99 100%);
+  box-shadow: inset 0px 0px 20px 0px #ffb039, inset -1px 1px 1px 0px #ffffff;
 }
-.diagram__categories__category:nth-of-type(3) .diagram__categories__category__type__color {
-  background: radial-gradient(circle at 50% 50%, #A6A6A6 83%, #CBCBCB 92%);
-  box-shadow: inset 0px 0px 20px 0px #696969,inset -1px 1px 1px 0px #FFFFFF;
+.diagram__categories__category:nth-of-type(3)
+  .diagram__categories__category__type__color {
+  background: radial-gradient(circle at 50% 50%, #a6a6a6 83%, #cbcbcb 92%);
+  box-shadow: inset 0px 0px 20px 0px #696969, inset -1px 1px 1px 0px #ffffff;
 }
-.diagram__categories__category:nth-of-type(4) .diagram__categories__category__type__color {
-  background: radial-gradient(circle at 50% 50%, #A6A6A6 83%, #CBCBCB 92%);
-  box-shadow: inset 0px 0px 20px 0px #696969,inset -1px 1px 1px 0px #FFFFFF;
-}
-
-.theme_dark .diagram__categories__category:nth-of-type(1) .diagram__categories__category__type__color {
-  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%, rgba(255, 163, 0, 0.8) 71.88%, rgba(91, 58, 0, 0.8) 100%);
-  box-shadow: 0px 0px 20px -8px rgba(248, 158, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 162, 0, 0.9);
-}
-.theme_dark .diagram__categories__category:nth-of-type(2) .diagram__categories__category__type__color {
-  background: radial-gradient(49.84% 49.84% at 49.84% 50.16%, rgba(99, 63, 0, 0.5) 72.92%, rgba(15, 9, 0, 0.5) 100%);
-  box-shadow: 0px 0px 20px -8px rgba(147, 93, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(202, 129, 0, 0.9);
-}
-.theme_dark .diagram__categories__category:nth-of-type(3) .diagram__categories__category__type__color {
-  background: radial-gradient(100% 100% at 50% 0%, rgba(151, 151, 151, 0.5) 0%, rgba(41, 41, 41, 0.5) 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5);
-}
-.theme_dark .diagram__categories__category:nth-of-type(4) .diagram__categories__category__type__color {
-  background: radial-gradient(100% 100% at 50% 0%, rgba(62, 62, 62, 0.5) 0%, rgba(40, 40, 40, 0.5) 100%);
-  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5);
+.diagram__categories__category:nth-of-type(4)
+  .diagram__categories__category__type__color {
+  background: radial-gradient(circle at 50% 50%, #a6a6a6 83%, #cbcbcb 92%);
+  box-shadow: inset 0px 0px 20px 0px #696969, inset -1px 1px 1px 0px #ffffff;
 }
 
-.diagram__categories__category__nums__change, .diagram__categories__category__nums__number {
+.theme_dark
+  .diagram__categories__category:nth-of-type(1)
+  .diagram__categories__category__type__color {
+  background: radial-gradient(
+    49.84% 49.84% at 49.84% 50.16%,
+    rgba(255, 163, 0, 0.8) 71.88%,
+    rgba(91, 58, 0, 0.8) 100%
+  );
+  box-shadow: 0px 0px 20px -8px rgba(248, 158, 0, 0.2),
+    inset -1px 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 20px rgba(255, 162, 0, 0.9);
+}
+.theme_dark
+  .diagram__categories__category:nth-of-type(2)
+  .diagram__categories__category__type__color {
+  background: radial-gradient(
+    49.84% 49.84% at 49.84% 50.16%,
+    rgba(99, 63, 0, 0.5) 72.92%,
+    rgba(15, 9, 0, 0.5) 100%
+  );
+  box-shadow: 0px 0px 20px -8px rgba(147, 93, 0, 0.2),
+    inset -1px 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 20px rgba(202, 129, 0, 0.9);
+}
+.theme_dark
+  .diagram__categories__category:nth-of-type(3)
+  .diagram__categories__category__type__color {
+  background: radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(151, 151, 151, 0.5) 0%,
+    rgba(41, 41, 41, 0.5) 100%
+  );
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.theme_dark
+  .diagram__categories__category:nth-of-type(4)
+  .diagram__categories__category__type__color {
+  background: radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(62, 62, 62, 0.5) 0%,
+    rgba(40, 40, 40, 0.5) 100%
+  );
+  box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.diagram__categories__category__nums__change,
+.diagram__categories__category__nums__number {
   display: inline-block;
-  color: #918F8A;
+  color: #918f8a;
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
@@ -112,7 +145,7 @@
     margin: 0 42px;
     align-items: center;
     justify-content: space-between;
-    height: calc(100vh * 296/376)
+    height: calc(100vh * 296 / 376);
   }
   .diagram__categories {
     margin: 0;

@@ -3,33 +3,33 @@
 }
 
 .theme_dark .header__mainheader {
-  color: #FCFBF7;
+  color: #fcfbf7;
 }
 
 .header__mainheader {
-  color: #261C00;
-font-family: Roboto;
-font-weight: bold;
-font-size: 30px;
-line-height: 32px;
-letter-spacing: 0px;
-text-align: left;
-margin: 0;
-margin-bottom: 8px;
+  color: #261c00;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 .theme_dark .header__secondaryheader {
-  color: #918F8A;
+  color: #918f8a;
 }
 .header__secondaryheader {
-  color: #BFBFBF;
-font-family: Roboto;
-font-weight: 500;
-font-size: 16px;
-line-height: 18px;
-letter-spacing: 0px;
-text-align: left;
-margin: 0;
+  color: #bfbfbf;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
 }
 
 @media (min-width: 667px) {

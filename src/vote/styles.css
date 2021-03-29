@@ -1,10 +1,10 @@
 @media (max-width: 500px) {
-  .vote__person__wrapper:nth-of-type(n+9) {
+  .vote__person__wrapper:nth-of-type(n + 9) {
     display: none;
   }
 
   .vote__users--vertical {
-    height: calc(100vh * 526/668);
+    height: calc(100vh * 526 / 668);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -33,7 +33,7 @@
     bottom: 0;
   }
 
-  .vote__button:nth-of-type(2n+1) {
+  .vote__button:nth-of-type(2n + 1) {
     order: 0;
   }
 
@@ -45,11 +45,13 @@
     order: -1;
   }
 
-  .vote__person__wrapper:nth-of-type(2), .vote__person__wrapper:nth-of-type(5) {
+  .vote__person__wrapper:nth-of-type(2),
+  .vote__person__wrapper:nth-of-type(5) {
     order: 1;
   }
 
-  .vote__person__wrapper:nth-of-type(3n + 3), .vote__person__wrapper:nth-of-type(8) {
+  .vote__person__wrapper:nth-of-type(3n + 3),
+  .vote__person__wrapper:nth-of-type(8) {
     order: 3;
   }
   .vote__buttonwrapper {
@@ -67,7 +69,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: calc(146px*2 + 4px);
+    height: calc(146px * 2 + 4px);
     justify-content: space-evenly;
     align-items: center;
     margin: 1px 16px;
@@ -84,22 +86,22 @@
   .vote__person__wrapper:nth-of-type(n + 7) {
     display: none;
   }
-  .vote__person__wrapper:nth-of-type(1){
+  .vote__person__wrapper:nth-of-type(1) {
     order: -2;
     height: 100%;
     position: relative;
     right: 1px;
   }
-  .vote__person__wrapper:nth-of-type(4){
+  .vote__person__wrapper:nth-of-type(4) {
     order: 2;
     height: 100%;
     position: relative;
     left: 1px;
   }
-  .vote__person__wrapper:nth-of-type(3n + 2){
+  .vote__person__wrapper:nth-of-type(3n + 2) {
     order: -1;
   }
-  .vote__person__wrapper:nth-of-type(3n + 3){
+  .vote__person__wrapper:nth-of-type(3n + 3) {
     order: 1;
   }
   .vote__buttonwrapper {
