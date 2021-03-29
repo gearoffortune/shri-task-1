@@ -27,10 +27,22 @@ const data = {
     ]
   }
 }
-
+const column = (elems) => html`<div class="vote__column">${elems}</div>`
+const getVerticalColumns = (users) =>{ 
+  const people = users.map(user => person('vote', {...user, valueText: ''}))
+  return html`<div class="vote__users--vertical">${[
+  column([people[0], people[3], people[6]]), 
+  column([button('vote', 'up', true), people[1], people[4], button('vote', 'down')]),
+  column([people[2], people[5], people[7]])
+  ]}</div>`
+}
 
 export const screenTemplate = (data) => html`${
   [
   header(data.title, data.subtitle), 
-  html`<div class="vote__users">${[...data.users.map(user => html`<div class="vote__person__wrapper">${person('vote',{ ...user, valueText: ''}, user.id === data.selectedUserId, '👍' , user.id === data.selectedUserId)}</div>`), button('vote', 'up', true), button('vote', 'down'), html`<div class="vote__buttonwrapper vote__buttonwrapper--horizontal">${[button("vote__buttonwrapper", 'up', true), button("vote__buttonwrapper", 'down')]}</div>`]}</div>`
+  html`<div class="vote__users--horizontal">${[...data.users.map(user => html`<div class="vote__person__wrapper">${person('vote',{ ...user, valueText: ''}, 
+  user.id === data.selectedUserId, '👍' , user.id === data.selectedUserId)}</div>`), button('vote', 'up', true), button('vote', 'down'), 
+  html`<div class="vote__buttonwrapper vote__buttonwrapper--horizontal">${[button("vote__buttonwrapper", 'up', true), button("vote__buttonwrapper", 'down')]}</div>`
+]}</div>`,
+getVerticalColumns(data.users)
 ]}`

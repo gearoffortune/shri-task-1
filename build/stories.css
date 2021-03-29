@@ -977,8 +977,24 @@ padding-top: calc((100% / 12) * 74 / 34);
     display: none;
   }
 
-  .vote__users {
+  .vote__users--vertical {
+    height: 526px;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .vote__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 4px;
+  }
+
+  .vote__users--horizontal {
+    display: none;
     flex-direction: column;
     flex-wrap: wrap;
     height: 480px;
@@ -1018,7 +1034,10 @@ padding-top: calc((100% / 12) * 74 / 34);
   display: none;
 }
 @media (max-height: 660px) {
-  .vote__users {
+  .vote__users--vertical {
+    display: none;
+  }
+  .vote__users--horizontal {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
